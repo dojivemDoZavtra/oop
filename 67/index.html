@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class Rectangle {
+
+            constructor(width, height) {
+                this.width = width
+                this.height = height
+                this.elem = document.createElement('div')
+                this.elem.style.width = this.width + 'px'
+                this.elem.style.height = this.height + 'px'
+                this.elem.style.border = '1px solid black'
+
+                document.body.appendChild(this.elem)
+            }
+
+            getWidth() {
+                console.log('getWidth:',this.elem.style.width)
+            }
+
+            setWidth(width) {
+                this.elem.style.width = width + 'px'
+            }
+
+            getHeight() {
+                console.log('getHeight:', this.elem.style.height)
+            }
+
+            setHeight(height) {
+                this.elem.style.height = height + 'px'
+            }
+        }
+
+        let rect = new Rectangle(100, 100)
+
+        rect.setWidth(200)
+        rect.getWidth()
+        rect.setHeight(200)
+        rect.getHeight()
+        
+    </script>
+</body>
+
+</html>
